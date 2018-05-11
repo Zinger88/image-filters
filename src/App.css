@@ -107,6 +107,26 @@ body {
   overflow: hidden;
 }
 
+.filters-line .filter {
+  flex: 0 1 100px;
+  margin-right: 10px;
+  height: 50px;
+  overflow: hidden;
+}
+
+.filters-line .image {
+  width: 300px;
+  height: 30px;
+}
+
+
+.image {
+  height: 400px;
+  -webkit-background-size: contain;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 input[type=range]::-webkit-slider-thumb {
   appearance: none;
   box-shadow: 0 0 10px rgba(0,0,0,.6);

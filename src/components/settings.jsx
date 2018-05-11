@@ -2,7 +2,7 @@ import React from 'react';
 import Range from './range'
 
 function Settings ({settings, hangdleChange}) {
-	const {contrast, hue, brightnes, sepia} = settings;
+	const {contrast, hue, brightness, sepia} = settings;
 	return (
 		<div className="aside">
 			<h3>Filters</h3>
@@ -18,7 +18,7 @@ function Settings ({settings, hangdleChange}) {
 				min={0}
 				max={150}
 				name = "brightness"
-				value = {brightnes}
+				value = {brightness}
 				onChange= {hangdleChange}
 			 />
 			
