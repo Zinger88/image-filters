@@ -71,10 +71,32 @@ body {
 
 }
 
-.image-container {
+.right-container {
   flex: 1 1 100%;
   overflow: hidden;
   padding: 15px;
+}
+
+.mini-img {
+  width: 100%;
+  height: 100%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.image-container {
+  height: 100%;
+  transition: .5s;
+}
+
+.filterselected {
+  flex: 0 1 100px;
+  margin-right: 10px;
+  height: 50px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.3);
+  transition: .3s;
 }
 
 .image-container img {
@@ -87,9 +109,13 @@ body {
 }
 
 .image {
-  padding-bottom: 10px;
-  border-bottom: 1px solid rgba(0,0,0,.3);
-  margin-bottom: 10px;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 400px;
+    margin: 0  auto;
+    -webkit-background-size: cover;
+    background-size: cover;
 }
 
 .filters-line {
@@ -98,6 +124,8 @@ body {
   display: -ms-flex;
   display: -o-flex;
   display: flex;
+  flex-wrap: wrap;
+  padding: 10px 0;
 }
 
 .filters-line .item {
@@ -112,6 +140,7 @@ body {
   margin-right: 10px;
   height: 50px;
   overflow: hidden;
+  border: 1px solid transparent;
 }
 
 .filters-line .image {
@@ -119,12 +148,12 @@ body {
   height: 30px;
 }
 
-
-.image {
+.main-img {
+  width: 100%;
+  margin: 0 auto;
   height: 400px;
-  -webkit-background-size: contain;
-  background-size: contain;
-  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
 }
 
 input[type=range]::-webkit-slider-thumb {

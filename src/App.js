@@ -10,7 +10,7 @@ import Image from './components/image';
 class App extends Component {
 	state = {
 		image: 'http://s1.1zoom.ru/big3/845/334726-svetik.jpg',
-		selectedFilter: '',
+		selectedFilter: '', 
 		settings: {
 			contrast: 100,
 			hue: 0,
@@ -30,30 +30,28 @@ class App extends Component {
 
 	updateSettings = (selectedFilter, settings) => {
 		this.setState({selectedFilter, settings});
-		console.log(this.state)
 	}
 
 	render() {
-		const { image , selectedFilter , settings } = this.state;
+		const { image , selectedFilter , settings, mainImg } = this.state;
 
 		return (
 			<div className="App">
-				<Header title="Image Filters App" />
+				<Header title="Image Filters App" select={selectedFilter}/>
 				<div className="container">
 					<Settings settings={settings} hangdleChange={this.hangdleChange} />
 
-					<div className="image-container">
+					<div className="right-container">
 						<Filter settings={settings}>
-							<Image src={image}/>
+							<Image src={image} mainClassName="main-img"/>
 						</Filter>
-						<div className="filters-line">
-							<FilterList
-								image = {image}
-								settings ={settings}
-								selectedFilter = {selectedFilter}
-								updateSettings = {this.updateSettings}
-							/>
-						</div>
+
+						<FilterList
+							image = {image}
+							settings ={settings}
+							selectedFilter = {selectedFilter}
+							updateSettings = {this.updateSettings}
+						/>
 					</div>
 				</div>
 			</div>

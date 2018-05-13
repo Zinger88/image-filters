@@ -1,9 +1,11 @@
 import React from 'react';
 
-function Image ({src}) {
+function Image ({src, mainClassName}) {
 	const style = { backgroundImage: `url(${src})` };
 
-	return <div className="image" style={style}></div>
+	return (
+		<div className={mainClassName} style={style}></div>
+	)
 }
 
 export default Image;
